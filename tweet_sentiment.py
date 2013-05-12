@@ -27,7 +27,7 @@ def scoreTweets(f, sentDict):
             # If the 'text' attribute isn't present skip the entry. It's a delete entry
             continue
 
-        wordList = re.split("[\s,\.,\,,\!,\;,\:]", t['text'])
+        wordList = re.split("[\s,\.,\,,\!,\;,\:,\',\"]", t['text'])
         total = 0
         for word in wordList:
             # Convert to lower and check if it's in the dict. if so add to total
